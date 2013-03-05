@@ -1,0 +1,20 @@
+{
+    "name": "Youtrack minimal bidi support",
+    "version": "0.1",
+
+    "description": "Right-align text blocks which likely contain right-to-left text on Youtrack.",
+    "update_url": "http://youtrack.buzzilla.com/bidi-extension/updates.xml",
+
+    "content_scripts": [
+        {
+            "matches": ["http://youtrack.buzzilla.com/*"],
+            "run_at": "document_idle",
+            "js": [
+                    "/js/external/jquery-2.0.0b2.js",
+                    "/js/content_script.js"
+                ]
+        }
+    ],
+
+    "manifest_version": 2
+}
